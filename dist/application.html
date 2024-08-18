@@ -29,156 +29,164 @@
         <main>
           <div class="inner">
             <div class="delivery">
-              <button class="button button__invers delivery__back" data-btn="data-btn">Назад в заказы<span class="button__icon">
-                  <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.025 4.94181L17.0833 10.0001M17.0833 10.0001L12.025 15.0585M17.0833 10.0001L2.5 10.0001" stroke="#0B1226" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg></span></button>
-              <form class="delivery__inner">
+              <header class="delivery__header">
+                <button class="button button__invers delivery__back" data-btn="data-btn">Назад в заказы<span class="button__icon">
+                    <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.025 4.94181L17.0833 10.0001M17.0833 10.0001L12.025 15.0585M17.0833 10.0001L2.5 10.0001" stroke="#0B1226" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></span></button>
                 <h1 class="delivery__h1">Заявка на отгрузку</h1>
+              </header>
+              <form class="delivery__form">
                 <section class="delivery__tabs">
                   <h2 class="delivery__h2">Способ доставки</h2>
-                  <div class="delivery__radios">
-                    <div class="delivery__radio delivery__radio_active" id="rad1">
-                      <input class="delivery__rad-input" id="inp1" type="radio" name="deliv" value="1"/><span class="delivery__rad-check"></span>
-                      <label class="delivery__rad-label" for="inp1">Самовывоз</label>
+                  <div class="delivery__tabs">
+                    <div class="delivery__radios">
+                      <div class="delivery__radio" id="rad1">
+                        <input class="delivery__rad-input" id="inp1" type="radio" name="deliv" value="1"/><span class="delivery__rad-check"></span>
+                        <label class="delivery__rad-label" for="inp1">Самовывоз</label>
+                      </div>
+                      <div class="delivery__radio" id="rad2">
+                        <input class="delivery__rad-input" id="inp2" type="radio" name="deliv" value="2"/><span class="delivery__rad-check"></span>
+                        <label class="delivery__rad-label" for="inp2">Транспортной компанией</label>
+                      </div>
                     </div>
-                    <div class="delivery__radio" id="rad2">
-                      <input class="delivery__rad-input" id="inp2" type="radio" name="deliv" value="2"/><span class="delivery__rad-check"></span>
-                      <label class="delivery__rad-label" for="inp2">Транспортной компанией</label>
+                    <div class="delivery__tab-block">
+                      <div class="delivery__tab-content" id="tab-rad2">Контент вкладки способ доставки Транспортной компанией</div>
+                      <div class="delivery__tab-content" id="tab-rad1">
+                        <section class="delivery__section">
+                          <h2 class="delivery__h2">Кто будет забирать<span class="delivery__h2_blue">**</span></h2>
+                          <div class="delivery__wrap">
+                            <div class="delivery__list">
+                              <div class="delivery__elem">
+                                <label class="delivery__elem-text" for="inp4">Конечный получатель
+                                  <input class="delivery__input" id="inp4" type="radio" name="deliv2" value="1"/><span class="delivery__pict"></span>
+                                </label>
+                              </div>
+                              <div class="delivery__elem">
+                                <label class="delivery__elem-text" for="inp5">Транспортная компания
+                                  <input class="delivery__input" id="inp5" type="radio" name="deliv2" value="2"/><span class="delivery__pict"></span>
+                                </label>
+                              </div>
+                              <div class="delivery__elem">
+                                <label class="delivery__elem-text" for="inp6">Доверенное лицо
+                                  <input class="delivery__input" id="inp6" type="radio" name="deliv2" value="3"/><span class="delivery__pict"></span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="delivery__cust-data">
+                              <input class="delivery__main-inp" type="text" placeholder="Наименование" required="required"/>
+                              <input class="delivery__main-inp" type="text" placeholder="ИНН (необязательно)" required="required"/>
+                              <div class="pin-file">
+                                <label class="pin-file__text">
+                                  <input class="pin-file__inp" type="file" name="file"/>
+                                  <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.04688 15.2857L15.2393 6.09334C17.9729 3.35967 22.4051 3.35967 25.1388 6.09334C27.8724 8.82701 27.8724 13.2592 25.1388 15.9928L14.5322 26.5994C12.7097 28.4219 9.75494 28.4219 7.93249 26.5994C6.11005 24.777 6.11005 21.8222 7.93249 19.9998L18.5391 9.39317C19.4503 8.48195 20.9277 8.48195 21.8389 9.39317C22.7501 10.3044 22.7501 11.7818 21.8389 12.693L12.6465 21.8854" stroke="#0B1226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg><span class="pin-file__span">Прикрепить файл доверенности</span>
+                                </label>
+                              </div>
+                            </div>
+                            <hr/>
+                            <hr/>
+                            <hr/>
+                            <div class="delivery__cust-data">
+                              <div class="pin-file">
+                                <label class="pin-file__text">
+                                  <input class="pin-file__inp" type="file" name="file"/>
+                                  <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.04688 15.2857L15.2393 6.09334C17.9729 3.35967 22.4051 3.35967 25.1388 6.09334C27.8724 8.82701 27.8724 13.2592 25.1388 15.9928L14.5322 26.5994C12.7097 28.4219 9.75494 28.4219 7.93249 26.5994C6.11005 24.777 6.11005 21.8222 7.93249 19.9998L18.5391 9.39317C19.4503 8.48195 20.9277 8.48195 21.8389 9.39317C22.7501 10.3044 22.7501 11.7818 21.8389 12.693L12.6465 21.8854" stroke="#0B1226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg><span class="pin-file__span">Прикрепить файл доверенности</span>
+                                </label>
+                              </div>
+                            </div>
+                            <hr/>
+                            <hr/>
+                            <hr/>
+                            <div class="delivery__cust-data">
+                              <div class="pin-file">
+                                <label class="pin-file__text">
+                                  <input class="pin-file__inp" type="file" name="file"/>
+                                  <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.04688 15.2857L15.2393 6.09334C17.9729 3.35967 22.4051 3.35967 25.1388 6.09334C27.8724 8.82701 27.8724 13.2592 25.1388 15.9928L14.5322 26.5994C12.7097 28.4219 9.75494 28.4219 7.93249 26.5994C6.11005 24.777 6.11005 21.8222 7.93249 19.9998L18.5391 9.39317C19.4503 8.48195 20.9277 8.48195 21.8389 9.39317C22.7501 10.3044 22.7501 11.7818 21.8389 12.693L12.6465 21.8854" stroke="#0B1226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg><span class="pin-file__span">Прикрепить файл доверенности</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <p class="delivery__info"><span>*</span> Если данной информации нет на момент заполнения шаблона, то предоставление необходимо после информирования о дате забора.</p>
+                        </section>
+                        <section class="delivery__section">
+                          <h2 class="delivery__h2">Вариант отгрузки документов</h2>
+                          <div class="delivery__wrap">
+                            <div class="delivery__list">
+                              <div class="delivery__elem">
+                                <label class="delivery__elem-text" for="inp7">Оригиналы отгрузочных документов передать с грузом (доверенному лицу)
+                                  <input class="delivery__input" id="inp7" type="radio" name="deliv3" value="1"/><span class="delivery__pict"></span>
+                                </label>
+                              </div>
+                              <div class="delivery__elem">
+                                <label class="delivery__elem-text" for="inp8">Оригиналы отгрузочных документов вложить в ящик с грузом
+                                  <input class="delivery__input" id="inp8" type="radio" name="deliv3" value="2"/><span class="delivery__pict"></span>
+                                </label>
+                              </div>
+                              <div class="delivery__elem">
+                                <label class="delivery__elem-text" for="inp9">Отправка третьим лицам, документы с ценами не прикладывать к грузу, оригиналы отгрузочных документов отправить почтой по адресу
+                                  <input class="delivery__input" id="inp9" type="radio" name="deliv3" value="3"/><span class="delivery__pict"></span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="delivery__cust-data">
+                              <input class="delivery__main-inp" type="text" placeholder="Адрес" required="required"/>
+                            </div>
+                            <hr/>
+                            <hr/>
+                            <hr/>
+                            <div class="delivery__cust-data">
+                              <input class="delivery__main-inp" type="text" placeholder="Адрес" required="required"/>
+                            </div>
+                            <hr/>
+                            <hr/>
+                            <hr/>
+                            <div class="delivery__cust-data">
+                              <input class="delivery__main-inp" type="text" placeholder="Адрес" required="required"/>
+                            </div>
+                          </div>
+                          <p class="delivery__info"><span>*</span> Возможна отгрузка по скану доверенности, с гарантией дальнейшей отправки оригинала по почте. Доверенность от даты составления шаблона.</p>
+                        </section>
+                      </div>
                     </div>
                   </div>
-                  <div class="delivery__tab-block">
-                    <div class="delivery__tab-content" id="tab-rad2">Контент вкладки способ доставки Транспортной компанией</div>
-                    <div class="delivery__tab-content delivery__tab-content_active" id="tab-rad1">
-                      <section class="delivery__section">
-                        <h2 class="delivery__h2">Кто будет забирать<span class="delivery__h2_blue">**</span></h2>
-                        <div class="delivery__wrap">
-                          <div class="delivery__list">
-                            <div class="delivery__elem">
-                              <input class="delivery__input" id="inp4" type="radio" name="deliv2" value="1"/><span class="delivery__pict"></span>
-                              <label class="delivery__elem-text" for="inp4">Конечный получатель</label>
-                            </div>
-                            <div class="delivery__elem">
-                              <input class="delivery__input" id="inp5" type="radio" name="deliv2" value="2"/><span class="delivery__pict"></span>
-                              <label class="delivery__elem-text" for="inp5">Транспортная компания</label>
-                            </div>
-                            <div class="delivery__elem">
-                              <input class="delivery__input" id="inp6" type="radio" name="deliv2" value="3"/><span class="delivery__pict"></span>
-                              <label class="delivery__elem-text" for="inp6">Доверенное лицо</label>
-                            </div>
-                          </div>
-                          <div class="delivery__cust-data">
-                            <input class="delivery__main-inp" type="text" placeholder="Наименование" required="required"/>
-                            <input class="delivery__main-inp" type="text" placeholder="ИНН (необязательно)" required="required"/>
-                            <div class="pin-file">
-                              <label class="pin-file__text">
-                                <input class="pin-file__inp" type="file" name="file"/>
-                                <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M6.04688 15.2857L15.2393 6.09334C17.9729 3.35967 22.4051 3.35967 25.1388 6.09334C27.8724 8.82701 27.8724 13.2592 25.1388 15.9928L14.5322 26.5994C12.7097 28.4219 9.75494 28.4219 7.93249 26.5994C6.11005 24.777 6.11005 21.8222 7.93249 19.9998L18.5391 9.39317C19.4503 8.48195 20.9277 8.48195 21.8389 9.39317C22.7501 10.3044 22.7501 11.7818 21.8389 12.693L12.6465 21.8854" stroke="#0B1226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg><span class="pin-file__span">Прикрепить файл доверенности</span>
-                              </label>
-                            </div>
-                          </div>
-                          <hr/>
-                          <hr/>
-                          <hr/>
-                          <div class="delivery__cust-data">
-                            <div class="pin-file">
-                              <label class="pin-file__text">
-                                <input class="pin-file__inp" type="file" name="file"/>
-                                <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M6.04688 15.2857L15.2393 6.09334C17.9729 3.35967 22.4051 3.35967 25.1388 6.09334C27.8724 8.82701 27.8724 13.2592 25.1388 15.9928L14.5322 26.5994C12.7097 28.4219 9.75494 28.4219 7.93249 26.5994C6.11005 24.777 6.11005 21.8222 7.93249 19.9998L18.5391 9.39317C19.4503 8.48195 20.9277 8.48195 21.8389 9.39317C22.7501 10.3044 22.7501 11.7818 21.8389 12.693L12.6465 21.8854" stroke="#0B1226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg><span class="pin-file__span">Прикрепить файл доверенности</span>
-                              </label>
-                            </div>
-                          </div>
-                          <hr/>
-                          <hr/>
-                          <hr/>
-                          <div class="delivery__cust-data">
-                            <div class="pin-file">
-                              <label class="pin-file__text">
-                                <input class="pin-file__inp" type="file" name="file"/>
-                                <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M6.04688 15.2857L15.2393 6.09334C17.9729 3.35967 22.4051 3.35967 25.1388 6.09334C27.8724 8.82701 27.8724 13.2592 25.1388 15.9928L14.5322 26.5994C12.7097 28.4219 9.75494 28.4219 7.93249 26.5994C6.11005 24.777 6.11005 21.8222 7.93249 19.9998L18.5391 9.39317C19.4503 8.48195 20.9277 8.48195 21.8389 9.39317C22.7501 10.3044 22.7501 11.7818 21.8389 12.693L12.6465 21.8854" stroke="#0B1226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg><span class="pin-file__span">Прикрепить файл доверенности</span>
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                        <p class="delivery__info"><span>*</span> Если данной информации нет на момент заполнения шаблона, то предоставление необходимо после информирования о дате забора.</p>
-                      </section>
-                      <section class="delivery__section">
-                        <h2 class="delivery__h2">Вариант отгрузки документов</h2>
-                        <div class="delivery__wrap">
-                          <div class="delivery__list">
-                            <div class="delivery__elem">
-                              <input class="delivery__input" id="inp7" type="radio" name="deliv3" value="1"/><span class="delivery__pict"></span>
-                              <label class="delivery__elem-text" for="inp7">Оригиналы отгрузочных документов передать с грузом (доверенному лицу)</label>
-                            </div>
-                            <div class="delivery__elem">
-                              <input class="delivery__input" id="inp8" type="radio" name="deliv3" value="2"/><span class="delivery__pict"></span>
-                              <label class="delivery__elem-text" for="inp8">Оригиналы отгрузочных документов вложить в ящик с грузом</label>
-                            </div>
-                            <div class="delivery__elem">
-                              <input class="delivery__input" id="inp9" type="radio" name="deliv3" value="3"/><span class="delivery__pict"></span>
-                              <label class="delivery__elem-text" for="inp9">Отправка третьим лицам, документы с ценами не прикладывать к грузу, оригиналы отгрузочных документов отправить почтой по адресу</label>
-                            </div>
-                          </div>
-                          <div class="delivery__cust-data">
-                            <input class="delivery__main-inp" type="text" placeholder="Адрес" required="required"/>
-                            <p class="delivery__info"><span>*</span> Возможна отгрузка по скану доверенности, с гарантией дальнейшей отправки оригинала по почте. Доверенность от даты составления шаблона.</p>
-                          </div>
-                          <hr/>
-                          <hr/>
-                          <hr/>
-                          <div class="delivery__cust-data">
-                            <input class="delivery__main-inp" type="text" placeholder="Адрес" required="required"/>
-                          </div>
-                          <p class="delivery__info"><span>*</span> Возможна отгрузка по скану доверенности, с гарантией дальнейшей отправки оригинала по почте. Доверенность от даты составления шаблона.</p>
-                          <hr/>
-                          <hr/>
-                          <hr/>
-                          <div class="delivery__cust-data">
-                            <input class="delivery__main-inp" type="text" placeholder="Адрес" required="required"/>
-                          </div>
-                          <p class="delivery__info"><span>*</span> Возможна отгрузка по скану доверенности, с гарантией дальнейшей отправки оригинала по почте. Доверенность от даты составления шаблона.</p>
-                        </div>
-                      </section>
-                      <section class="delivery__section">
-                        <h2 class="delivery__h2 delivery__h2_padd">Дополнительные требования к доставке
-                          <p class="delivery__clean">
-                            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M9.11008 5.08015C9.98008 4.82015 10.9401 4.65015 12.0001 4.65015C16.7901 4.65015 20.6701 8.53015 20.6701 13.3201C20.6701 18.1101 16.7901 21.9901 12.0001 21.9901C7.21008 21.9901 3.33008 18.1101 3.33008 13.3201C3.33008 11.5401 3.87008 9.88015 4.79008 8.50015" stroke="#747884" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                              <path d="M7.87012 5.32012L10.7601 2.00012" stroke="#747884" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                              <path d="M7.87012 5.32007L11.2401 7.78007" stroke="#747884" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg><span class="delivery__span">Очистить все</span>
-                          </p>
-                        </h2>
-                        <div class="delivery__form-textarea">
-                          <textarea class="delivery__textarea" id="txt1" placeholder="Комментарий (например, инструкция, паспорт и другое). Если доставка через ТК, укажите вид упаковки"></textarea>
-                        </div>
-                        <div class="delivery__form-checkbox">
-                          <input class="delivery__checkbox" id="inp3" type="checkbox"/><span class="delivery__checkmark">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M20 7L14.6093 13.4688C12.4732 16.0322 11.4051 17.3139 10 17.3139C8.59488 17.3139 7.52681 16.0322 5.39067 13.4688L4 11.8" stroke="#62215B" stroke-width="2" stroke-linecap="round"></path>
-                            </svg></span>
-                          <label class="delivery__check-label" for="inp3">Нажимая на кнопку «Отправить», я принимаю<a class="delivery__policy" href="#">условия политики конфиденциальности</a></label>
-                        </div>
-                        <div class="btns"><a class="btns__previw" href="#">Предварительный просмотр</a><a class="btns__download" href="#" download="download">Скачать заявку в PDF<span class="btns__span">
-                              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 21.0004H18" stroke="#0B1226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M12 3.00037L12 17.0004" stroke="#0B1226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M17 12.0004L12 17.0004L7 12.0004" stroke="#0B1226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                              </svg></span></a></div>
-                        <div class="delivery__form-button">
-                          <button class="button" data-btn="data-btn">Отправить<span class="button__icon">
-                              <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.025 4.94181L17.0833 10.0001M17.0833 10.0001L12.025 15.0585M17.0833 10.0001L2.5 10.0001" stroke="#0B1226" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                              </svg></span></button>
-                        </div>
-                      </section>
-                    </div>
+                </section>
+                <section class="delivery__section">
+                  <h2 class="delivery__h2 delivery__h2_padd">Дополнительные требования к доставке
+                    <p class="delivery__clean">
+                      <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.11008 5.08015C9.98008 4.82015 10.9401 4.65015 12.0001 4.65015C16.7901 4.65015 20.6701 8.53015 20.6701 13.3201C20.6701 18.1101 16.7901 21.9901 12.0001 21.9901C7.21008 21.9901 3.33008 18.1101 3.33008 13.3201C3.33008 11.5401 3.87008 9.88015 4.79008 8.50015" stroke="#747884" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M7.87012 5.32012L10.7601 2.00012" stroke="#747884" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M7.87012 5.32007L11.2401 7.78007" stroke="#747884" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg><span class="delivery__span">Очистить все</span>
+                    </p>
+                  </h2>
+                  <div class="delivery__form-textarea">
+                    <textarea class="delivery__textarea" id="txt1" placeholder="Комментарий (например, инструкция, паспорт и другое). Если доставка через ТК, укажите вид упаковки"></textarea>
+                  </div>
+                  <div class="delivery__form-checkbox">
+                    <input class="delivery__checkbox" id="inp3" type="checkbox"/><span class="delivery__checkmark">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 7L14.6093 13.4688C12.4732 16.0322 11.4051 17.3139 10 17.3139C8.59488 17.3139 7.52681 16.0322 5.39067 13.4688L4 11.8" stroke="#62215B" stroke-width="2" stroke-linecap="round"></path>
+                      </svg></span>
+                    <label class="delivery__check-label" for="inp3">Нажимая на кнопку «Отправить», я принимаю<a class="delivery__policy" href="#">условия политики конфиденциальности</a></label>
+                  </div>
+                  <div class="btns"><a class="btns__previw" href="#">Предварительный просмотр</a><a class="btns__download" href="#" download="download">Скачать заявку в PDF<span class="btns__span">
+                        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6 21.0004H18" stroke="#0B1226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M12 3.00037L12 17.0004" stroke="#0B1226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M17 12.0004L12 17.0004L7 12.0004" stroke="#0B1226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></span></a></div>
+                  <div class="delivery__form-button">
+                    <button class="button" data-btn="data-btn">Отправить<span class="button__icon">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12.025 4.94181L17.0833 10.0001M17.0833 10.0001L12.025 15.0585M17.0833 10.0001L2.5 10.0001" stroke="#0B1226" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></span></button>
                   </div>
                 </section>
               </form>
